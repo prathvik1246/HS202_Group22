@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Shield, Zap, Bell, FileCheck, ArrowRight } from "lucide-react";
+import { Shield, Zap, FileCheck, ArrowRight, TrendingUp, AlertTriangle, Newspaper } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import { Link } from "react-router-dom";
 import heroBackground from "@/assets/hero-background.jpg";
@@ -11,21 +11,37 @@ const Index = () => {
       icon: <Zap className="h-12 w-12" />,
       title: "Quick Analysis",
       description: "Upload screenshots from social media and get instant AI-powered verification results within seconds.",
+      link: "/check",
     },
     {
       icon: <FileCheck className="h-12 w-12" />,
       title: "Label Detection",
       description: "Advanced AI detects text, images, and metadata from posts to identify potential misinformation.",
+      link: "/check",
+    },
+    {
+      icon: <TrendingUp className="h-12 w-12" />,
+      title: "Trending Verified Feed",
+      description: "Stay updated with the latest verified news from trusted sources across all major platforms.",
+      link: "/trending",
+    },
+    {
+      icon: <AlertTriangle className="h-12 w-12" />,
+      title: "Report Fake News",
+      description: "Help combat misinformation by reporting suspicious content directly to authorities.",
+      link: "/report",
+    },
+    {
+      icon: <Newspaper className="h-12 w-12" />,
+      title: "Breaking News Voting",
+      description: "Participate in community-driven verification of breaking news with real-time voting.",
+      link: "/breaking",
     },
     {
       icon: <Shield className="h-12 w-12" />,
       title: "Source Verification",
       description: "Cross-reference content with verified sources and fact-checking databases for accuracy.",
-    },
-    {
-      icon: <Bell className="h-12 w-12" />,
-      title: "Report to Authorities",
-      description: "Automatically send detailed reports to PIB and relevant authorities for action.",
+      link: "/check",
     },
   ];
 
@@ -106,23 +122,30 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, idx) => (
-              <Card
+              <Link
                 key={idx}
-                className="border-2 hover:border-primary/50 transition-all hover:shadow-xl hover:-translate-y-1 animate-slide-up"
-                style={{ animationDelay: `${idx * 0.1}s` }}
+                to={feature.link}
+                className="block group"
               >
-                <CardContent className="p-8">
-                  <div className="bg-gradient-to-br from-primary/20 to-accent/20 text-primary rounded-2xl w-20 h-20 flex items-center justify-center mb-6">
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>
-                  <p className="text-muted-foreground text-lg leading-relaxed">
-                    {feature.description}
-                  </p>
-                </CardContent>
-              </Card>
+                <Card
+                  className="border-2 hover:border-primary/50 transition-all hover:shadow-xl hover:-translate-y-1 animate-slide-up h-full"
+                  style={{ animationDelay: `${idx * 0.1}s` }}
+                >
+                  <CardContent className="p-8">
+                    <div className="bg-gradient-to-br from-primary/20 to-accent/20 text-primary rounded-2xl w-20 h-20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                      {feature.icon}
+                    </div>
+                    <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">
+                      {feature.title}
+                    </h3>
+                    <p className="text-muted-foreground text-lg leading-relaxed">
+                      {feature.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              </Link>
             ))}
           </div>
         </div>
