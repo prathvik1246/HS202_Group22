@@ -47,7 +47,7 @@ const About = () => {
               Fighting Misinformation with AI
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              In an era of information overload, TruthGuard empowers users to distinguish fact from fiction.
+              In an era of information overload, FactRadar empowers users to distinguish fact from fiction.
               Our advanced AI technology helps combat the spread of fake news and misinformation across digital platforms.
             </p>
           </div>
@@ -57,7 +57,7 @@ const About = () => {
             <CardContent className="p-8 md:p-12">
               <h2 className="text-3xl font-bold mb-6 text-center">Our Mission</h2>
               <p className="text-lg text-muted-foreground leading-relaxed text-center max-w-4xl mx-auto">
-                We believe that access to accurate information is a fundamental right. TruthGuard was created
+                We believe that access to accurate information is a fundamental right. FactRadar was created
                 to provide everyone with a simple, powerful tool to verify the authenticity of news and content
                 they encounter online. By combining cutting-edge AI technology with human expertise, we're
                 building a safer, more informed digital world.

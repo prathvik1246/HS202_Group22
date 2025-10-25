@@ -135,7 +135,7 @@ const Index = () => {
             Ready to Fight Misinformation?
           </h2>
           <p className="text-xl mb-10 opacity-90">
-            Join thousands of users who trust TruthGuard to verify news authenticity
+            Join thousands of users who trust FactRadar to verify news authenticity
           </p>
           <Button
             size="lg"
@@ -155,7 +155,7 @@ const Index = () => {
       <footer className="py-8 px-4 sm:px-6 lg:px-8 border-t border-border bg-card">
         <div className="container mx-auto max-w-6xl text-center text-muted-foreground">
           <p className="text-sm">
-            © 2025 TruthGuard. Fighting fake news with AI technology.
+            © 2025 FactRadar. Fighting fake news with AI technology.
           </p>
         </div>
       </footer>
